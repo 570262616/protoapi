@@ -78,7 +78,9 @@ type springGen struct {
 func (g *springGen) getTpl(path string) *template.Template {
 
 	var funcs = template.FuncMap{
-		"toLower": Lcfirst,
+		"toLower":         Lcfirst,
+		"removePkgName":   RemovePkgName,
+		"isContainsPoint": IsContainsPoint,
 	}
 	var err error
 	tpl := template.New("tpl").Funcs(funcs)
@@ -157,7 +159,11 @@ func (g *springGen) Gen(applicationName string, packageName string, services []*
 		filename := g.getStructFilename(packageName, msg)
 		content := g.genStruct(msg)
 
-		result[filename] = content
+		newFlieName := strings.Replace(filename, ".java", "", -1)
+
+		if !strings.Contains(newFlieName, ".") {
+			result[filename] = content
+		}
 	}
 
 	// make file name same as java class name
@@ -173,8 +179,43 @@ func init() {
 }
 
 func Lcfirst(str string) string {
-	for i, v := range str {
-		return string(unicode.ToLower(v)) + str[i+1:]
+
+	index := strings.Index(str, ".")
+	l := strings.Count(str, "") - 1
+
+	n := substring(str, index+1, l)
+
+	for i, v := range n {
+		return string(unicode.ToLower(v)) + n[i+1:]
 	}
 	return ""
+}
+
+func RemovePkgName(str string) string {
+
+	index := strings.Index(str, ".")
+	l := strings.Count(str, "") - 1
+
+	n := substring(str, index+1, l)
+
+	return n
+}
+
+func IsContainsPoint(str string) bool {
+	return !strings.Contains(str, ".")
+}
+
+func substring(source string, start int, end int) string {
+	var r = []rune(source)
+	length := len(r)
+
+	if start < 0 || end > length || start > end {
+		return ""
+	}
+
+	if start == 0 && end == length {
+		return source
+	}
+
+	return string(r[start:end])
 }

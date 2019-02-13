@@ -198,6 +198,7 @@ func getMethods(pkg string, path string, service *descriptor.ServiceDescriptorPr
 			URI:        serviceName + "." + mtd.GetName(),
 			Comment:    getCommentsFromMap(mtdMessagePath, cMap),
 			Options:    getMethodOptions(mtd),
+			Package:    pkg,
 		}
 		resultMtd = append(resultMtd, mtdData)
 	}

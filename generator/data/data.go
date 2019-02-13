@@ -138,6 +138,7 @@ type Method struct {
 	URI        string
 	Comment    string
 	Options    OptionMap // service method option (default is GET and POST)
+	Package    string
 }
 
 type ServiceData struct {
