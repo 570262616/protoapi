@@ -136,7 +136,7 @@ func genSpringPackageName(packageName string, options data.OptionMap) string {
 }
 
 func (g *springGen) genServiceFileName(packageName string, service *data.ServiceData) string {
-	return strings.Replace(packageName, ".", "/", -1) + "/" + service.Name + "Base.java"
+	return strings.Replace(packageName, ".", "/", -1) + "/" + service.Name + "ServiceAPI.java"
 }
 
 func (g *springGen) Init(request *plugin.CodeGeneratorRequest) {
