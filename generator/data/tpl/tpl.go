@@ -402,30 +402,30 @@ tisVzCnvvwAAAP//2W6eJx4PAAA=
 	"/generator/template/spring_service.gojava": {
 		name:    "spring_service.gojava",
 		local:   "generator/template/spring_service.gojava",
-		size:    856,
+		size:    738,
 		modtime: 0,
 		compressed: `
-H4sIAAAAAAAC/6yRTY7iMBCF9zlFKauwGHOAbBADQiwgaMgFKkkRLKDssSuNUOS7t8JfsuhuqRFZRX5+
-z++rGo/hr6kIamJyKFRBcQHrjBi0OoVZBussh/lsmasoslgesCZoW7W5/YaQRpE+WeMEjKuVt05zvXN4
-orNxB3WmQhWaK4XMRlC0YbUgWaG1muv0t9aN8S97/5G3hj1NTXV5wfy/IS83b2Sb4qhLwMKLw1KgPKL3
-3VTWeKIQpugJ2ggAoG3/gEOuCdSKZG8qDyE8Fb0DJlBbch+6pPxiCeLFPI8fdyYD3iS+Tl32IcSjmzok
-up7ce7WtyhqxjXSJIfTFurhkMmDppCX3NzWP7sW7z5E0jnt7onmUXtUegbjq2v6ItMm2A6Z+/e9AWpAk
-b4V4LvXbJ794L71HPZJC9BkAAP//3o5aN1gDAAA=
+H4sIAAAAAAAC/5ySzW7qMBCF936KEStYXPMAufcqbekCqfyI8gIOGVwL4nFthwhZ8+5VQqEEsSm7aGa+
+OZlzPB7DC5UIGi16FbGE4gjOUyTlTAaTBcwXa3idTNdSCKc2O6URUpLL0yezbOeEMJUjH/udlP6AV1Yj
+yBnGDyoDMBvr6ihTkos6ujqujw6Z20m0JTBnD2ya2ruLLj9FXsvgvLF661WFDfmdbLCQhbGlVNZSVNGQ
+lUsKcaacM1Znv2VX+FljiM9UHh9lL9Jn3pAMjdIa/dV0kE/OLJVXVSZE3keHg3FKAJHeqEEPcq4qZB6M
+hKuLvdmAsRH9Vm26BE/Nd/QH0xaEAAC4a3TXya/cGR7Uvkb4B51eTw46vRb41lxhcGQD/r2J/D/coszD
+/MpGyM+HQj/jHnipA/Mo+zni9AiEYPEVAAD//3P71KviAgAA
 `,
 	},
 
 	"/generator/template/spring_struct.gojava": {
 		name:    "spring_struct.gojava",
 		local:   "generator/template/spring_struct.gojava",
-		size:    585,
+		size:    383,
 		modtime: 0,
 		compressed: `
-H4sIAAAAAAAC/5SPwWoCMRCG73mKOdqD8QGWQkFbqBT1sC8w7o7baDYJk1mphLx7ibqtUmhpTjOB+f7v
-n81g7luCjhwxCrWwPUFgLx6DqWCxhtW6hufFa62VCtgcsCNISW8uY86VUqYPngUa3+sdRiH+6K3eY3OI
-3ml0zguK8U4vo3dzJhTP1b+ONuwDsZy+s/Z4RD2IsfrNRKmUCsPWmgYaizEWv3kZVthTzpAUAEBKU2B0
-HYF+MWTbmPP5P7A5ohDsjENbTpd4xPoUzpcJdIFA6TlCyLWQszrvTzedLrSLx73BpKzeCQ+NbJCxz/nh
-D6vy5N1EfaMAj78KlfWqldIdE6Zj1y+7m5IdScHWRmzhTka18phkYPczNl9jxuysPgMAAP//ioLHmkkC
-AAA=
+H4sIAAAAAAAC/1yQwUojQRCG7/0UP2EPu8NuzwMMC1mSXVjBJGBeoCZTjm063U1Pz8hk6KMoHgRvnjx7
+UsG7b5OIbyETCYK3n6Lq/z4qTTGyBaNkw54CF8hbOG+DJacyjKeYTOf4O/4/l0I4WiypZHSdnH3EGDMh
+1MpZH6CsrM6oLNlLMsYGCsqaSv5x6tAWrGfeOvahzfb72q5yu5RjCvRZckoNSWXlEXtFWq0p15wJkSaJ
+QIIh1eHEevA6r1tYg29dQYGjQJKKYd8kXJ1rtcBCU1X1oqM+TGjFMaITAgC67hc8mZIh/ynWRRXjbj78
+qvq9IV0zfmOwvbzZ3j5un+/fLq5+YvNyvnm4e71+GvzYHTqvGgqMY2VI99ADamjeuh2zg+zx6F+1p7Mp
+EKOI4j0AAP//MO2lcn8BAAA=
 `,
 	},
 

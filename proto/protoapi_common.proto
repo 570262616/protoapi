@@ -23,7 +23,7 @@ message CommonError {
   GenericError genericError = 1;
   AuthError authError = 2;
   ValidateError validateError = 3;
-  BindError bindError = 4;
+  BindError bindError = 4; 
 }
 
 message GenericError { string message = 1; }

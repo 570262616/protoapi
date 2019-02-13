@@ -2,26 +2,19 @@
 
 package {{.Package}};
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
-import java.util.List;
+import java.io.Serializable;
 
+/**
+ * @author ezbuy on ${date}
+ */
+@Data
 public class {{.ClassName}} {
+
     {{- range .Fields}}
+    @ApiModelProperty(value = "我是注释, 待实现")
     private final {{.JavaType}} {{ .Name }};
     {{- end }}
-
-    @JsonCreator
-    public {{.ClassName}}({{.ContructParam}}) {
-    {{- range .Fields}}
-        this.{{ .Name }} = {{ .Name }};
-    {{- end }}
-    }
-
-    {{range .Fields -}}
-    public {{.JavaType}} get{{ .Title }}() {
-        return {{ .Name }};
-    }
-    {{ end }}
 }

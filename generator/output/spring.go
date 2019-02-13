@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strings"
 	"text/template"
+	"unicode"
 
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/yoozoo/protoapi/generator/data"
@@ -75,8 +76,12 @@ type springGen struct {
 }
 
 func (g *springGen) getTpl(path string) *template.Template {
+
+	var funcs = template.FuncMap{
+		"toLower": Lcfirst,
+	}
 	var err error
-	tpl := template.New("tpl")
+	tpl := template.New("tpl").Funcs(funcs)
 	tplStr := data.LoadTpl(path)
 	result, err := tpl.Parse(tplStr)
 	if err != nil {
@@ -165,4 +170,11 @@ func (g *springGen) Gen(applicationName string, packageName string, services []*
 
 func init() {
 	data.OutputMap["spring"] = &springGen{}
+}
+
+func Lcfirst(str string) string {
+	for i, v := range str {
+		return string(unicode.ToLower(v)) + str[i+1:]
+	}
+	return ""
 }
