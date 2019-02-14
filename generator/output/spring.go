@@ -99,10 +99,23 @@ func (g *springGen) init(applicationName, packageName string) {
 	g.serviceTpl = g.getTpl("/generator/template/spring_service.gojava")
 }
 
-func (g *springGen) getStructFilename(packageName string, msg *data.MessageData) string {
+func (g *springGen) getStructFilename(packageName string, msg *data.MessageData, service *data.ServiceData) string {
 	data.FlattenLocalPackage(msg)
 
-	return strings.Replace(packageName, ".", "/", -1) + "/" + msg.Name + ".java"
+	var name = strings.Replace(packageName, ".", "/", -1) + "/message/" + msg.Name + ".java"
+
+	// for _, method := range service.Methods {
+
+	// 	log.Printf("%s: %s: %s", msg.Name, method.InputType, method.OutputType)
+
+	// 	if strings.Compare(method.InputType, msg.Name) == 0 {
+	// 		name = strings.Replace(packageName, ".", "/", -1) + "/input/" + msg.Name + ".java"
+	// 	} else if strings.Compare(method.OutputType, msg.Name) == 0 {
+	// 		name = strings.Replace(packageName, ".", "/", -1) + "/output/" + msg.Name + ".java"
+	// 	}
+	// }
+
+	return name
 }
 
 func (g *springGen) genStruct(msg *data.MessageData) string {
@@ -136,7 +149,7 @@ func genSpringPackageName(packageName string, options data.OptionMap) string {
 }
 
 func (g *springGen) genServiceFileName(packageName string, service *data.ServiceData) string {
-	return strings.Replace(packageName, ".", "/", -1) + "/" + service.Name + "ServiceAPI.java"
+	return strings.Replace(packageName, ".", "/", -1) + "/api/" + service.Name + "ServiceAPI.java"
 }
 
 func (g *springGen) Init(request *plugin.CodeGeneratorRequest) {
@@ -156,7 +169,7 @@ func (g *springGen) Gen(applicationName string, packageName string, services []*
 	result = make(map[string]string)
 
 	for _, msg := range messages {
-		filename := g.getStructFilename(packageName, msg)
+		filename := g.getStructFilename(packageName, msg, service)
 		content := g.genStruct(msg)
 
 		newFlieName := strings.Replace(filename, ".java", "", -1)

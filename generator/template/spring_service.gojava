@@ -2,19 +2,8 @@
 
 package {{.Package}};
 
-{{- range .Methods }}
-{{- if isContainsPoint .OutputType }}
-
-import {{.Package}}.{{removePkgName .OutputType}};
-{{- else }}
-import {{.OutputType}};
-{{- end }}
-{{- if isContainsPoint .InputType }}
-import {{.Package}}.{{removePkgName .InputType}};
-{{- else }}
-import {{.InputType}};
-{{- end }}
-{{- end }};
+{{.Imports}}
+{{$s := .}}
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
