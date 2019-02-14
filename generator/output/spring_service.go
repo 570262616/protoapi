@@ -56,13 +56,30 @@ func (s *springService) Imports() (result string) {
 		var input string
 		var output string
 		if !IsContainsPoint(m.InputType) {
-			input = "import" + " " + m.InputType
+			in := strings.Split(m.InputType, ".")
+			i := len(in)
+
+			in = append(in, "")
+			copy(in[i:], in[i-1:])
+			in[i-1] = "message"
+			newInputType := strings.Join(in, ".")
+
+			input = "import" + " " + newInputType
 		} else {
 			input = "import" + " " + m.Package + ".message." + m.InputType
 		}
 
 		if !IsContainsPoint(m.OutputType) {
-			output = "import" + " " + m.OutputType
+
+			in := strings.Split(m.OutputType, ".")
+			i := len(in)
+
+			in = append(in, "")
+			copy(in[i:], in[i-1:])
+			in[i-1] = "message"
+			newOutputType := strings.Join(in, ".")
+
+			output = "import" + " " + newOutputType
 		} else {
 			output = "import" + " " + m.Package + ".message." + m.OutputType
 		}
