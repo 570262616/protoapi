@@ -58,13 +58,13 @@ func (s *springService) Imports() (result string) {
 		if !IsContainsPoint(m.InputType) {
 			input = "import" + " " + m.InputType
 		} else {
-			input = "import" + " " + m.Package + "." + m.InputType
+			input = "import" + " " + m.Package + ".message." + m.InputType
 		}
 
 		if !IsContainsPoint(m.OutputType) {
 			output = "import" + " " + m.OutputType
 		} else {
-			output = "import" + " " + m.Package + "." + m.OutputType
+			output = "import" + " " + m.Package + ".message." + m.OutputType
 		}
 
 		if !in_array(input, imports) {
