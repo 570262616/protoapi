@@ -52,3 +52,47 @@ func (s *springStruct) ContructParam() string {
 func (s *springStruct) ClassName() string {
 	return s.Name
 }
+
+func (s *springStruct) Imports() string {
+
+	var imports []string
+	var typeName string
+
+	for _, f := range s.Fields {
+
+		dataType := customeType(f.DataType)
+
+		if !IsContainsPoint(dataType) {
+
+			in := strings.Split(dataType, ".")
+			i := len(in)
+
+			in = append(in, "")
+			copy(in[i:], in[i-1:])
+			in[i-1] = "message"
+			newType := strings.Join(in, ".")
+
+			typeName = "import" + " " + "com.ezbuy.blazer.api." + newType + ";"
+		} else {
+			typeName = "import" + " " + s.Package + ".message." + dataType + ";"
+		}
+
+		if dataType != "" && !in_array(typeName, imports) {
+			imports = append(imports, typeName)
+		}
+
+	}
+
+	return strings.Join(imports, "\n")
+
+}
+
+func customeType(dataType string) string {
+	// if not repeated filed
+	// check if primary type
+	if _, ok := javaTypes[dataType]; ok {
+		return ""
+	}
+	// if not primary type return data type and ignore the . in the data type
+	return dataType
+}

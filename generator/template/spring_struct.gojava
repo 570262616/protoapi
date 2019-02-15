@@ -2,6 +2,9 @@
 
 package {{.Package}}.message;
 
+{{.Imports}}
+{{$s := .}}
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -16,6 +19,6 @@ public class {{.ClassName}} {
     {{- range .Fields}}
     
     @ApiModelProperty(value = "我是注释, 待实现")
-    private final {{.JavaType}} {{ .Name }};
+    private final {{removePkgName .JavaType}} {{removePkgName .Name }};
     {{- end }}
 }

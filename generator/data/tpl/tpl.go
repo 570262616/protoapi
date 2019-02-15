@@ -418,15 +418,15 @@ FN63AgAA
 	"/generator/template/spring_struct.gojava": {
 		name:    "spring_struct.gojava",
 		local:   "generator/template/spring_struct.gojava",
-		size:    396,
+		size:    449,
 		modtime: 0,
 		compressed: `
-H4sIAAAAAAAC/1yOwWrbQBCG7/sUP6aHVrSrBxAFF7uFFmob6hcYWVN169XuslqpyGKPJSGHQG455ZxT
-Esg9b2OHvEWQQhLIZfgZZv7vS1PMbMEo2bCnwAXyDs7bYMmpDPMlFss1vs6/r6UQjjZbKhl9L1dPMUZZ
-cV1TyZkQqnLWBygr639UluwlGWMDBWVNLb849dMWrFfeOvahy57vta1yu5VzCvRa8pdaksrKX+wVabWj
-XA+INEkEEkypCX+sB+/ypoM1eNcXFDgKJKmYDk3CNblWG2w01fUgPBvCgiqOEb0QAND3n+DJlAz5TbEu
-6hjH/Timb33ft6QbxmdMDsdnh/Prw+3lw9HJR+zv/u+vLu5PbyYfxkfnVUuB8VsZ0gP5B7W07twI7iEH
-B8SYvSiwKRCjiOIxAAD//x3ECGCMAQAA
+H4sIAAAAAAAC/1xPzaoTMRjd5ykOl7vQQTN7hwuVW4Ur2BbsC3zT+RxjM0lIMiPTkKUoLgR3rly7UsG9
+b9OKbyEzYhfdHA4n+c5PWeLWNoyWDXuK3KAe4byNlpyqsFxjtd7iyfJuK4VwtNtTy0hJbv7RnGXHIVDL
+lRApybvOWR9DziKl64BHN5A5C6FmGcrK8Ibalr0kY2ykqKwJ8rFTz23DeuOtYx/H6v9/bbva7uWSIlVn
+k9c0kFRWvmCvSKsD1XoKL4tCoMCC+vjKevCh7kdYg+vUUOQsUJRiMTkJ19da7bDTFMI05XYiK+o4ZyQh
+ACClh/BkWoZ8qlg306BJn2Fx2ffeQLpn3ODq9P7T6fP308+vf959eIDjr7fHb19+f/xxdX8+dF4NFBkv
+lSGNlDx3duDNvp3CIZ/RQNvRzTUu32bMuTq3Y9MgZ5HF3wAAAP//4Zq7DcEBAAA=
 `,
 	},
 
