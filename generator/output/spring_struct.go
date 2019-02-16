@@ -77,7 +77,13 @@ func (s *springStruct) Imports() string {
 			typeName = "import" + " " + s.Package + ".message." + dataType + ";"
 		}
 
-		if dataType != "" && !in_array(typeName, imports) {
+		listImport := "import java.util.List;"
+
+		if f.Label == data.FieldRepeatedLabel && !in_array(listImport, imports) {
+			imports = append(imports, listImport)
+		}
+
+		if dataType != "" && dataType != "int" && !in_array(typeName, imports) {
 			imports = append(imports, typeName)
 		}
 

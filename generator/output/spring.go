@@ -2,14 +2,12 @@ package output
 
 import (
 	"bytes"
-	"fmt"
 	"strings"
 	"text/template"
 	"unicode"
 
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/yoozoo/protoapi/generator/data"
-	"github.com/yoozoo/protoapi/util"
 )
 
 var javaTypes = map[string]string{
@@ -158,7 +156,8 @@ func (g *springGen) Init(request *plugin.CodeGeneratorRequest) {
 func (g *springGen) Gen(applicationName string, packageName string, services []*data.ServiceData, messages []*data.MessageData, enums []*data.EnumData, options data.OptionMap) (result map[string]string, err error) {
 	var service *data.ServiceData
 	if len(services) > 1 {
-		util.Die(fmt.Errorf("found %d services; only 1 service is supported now", len(services)))
+		// util.Die(fmt.Errorf("found %d services; only 1 service is supported now", len(services)))
+		service = services[len(services)-1]
 	} else if len(services) == 1 {
 		service = services[0]
 	}
@@ -206,12 +205,19 @@ func Lcfirst(str string) string {
 
 func RemovePkgName(str string) string {
 
-	index := strings.Index(str, ".")
+	if IsContainsPoint(str) {
+		return str
+	}
+
+	pointIndex := strings.Index(str, ".")
 	l := strings.Count(str, "") - 1
 
-	n := substring(str, index+1, l)
+	index := strings.Index(str, "<")
 
-	return n
+	n1 := substring(str, 0, index+1)
+	n2 := substring(str, pointIndex+1, l)
+
+	return n1 + n2
 }
 
 func IsContainsPoint(str string) bool {

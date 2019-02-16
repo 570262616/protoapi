@@ -64,9 +64,9 @@ func (s *springService) Imports() (result string) {
 			in[i-1] = "message"
 			newInputType := strings.Join(in, ".")
 
-			input = "import" + " " + "com.ezbuy.blazer.api." + newInputType
+			input = "import" + " " + "com.ezbuy.blazer.api." + newInputType + ";"
 		} else {
-			input = "import" + " " + "com.ezbuy.blazer.api." + m.Package + ".message." + m.InputType
+			input = "import" + " " + "com.ezbuy.blazer.api." + m.Package + ".message." + m.InputType + ";"
 		}
 
 		if !IsContainsPoint(m.OutputType) {
@@ -79,9 +79,9 @@ func (s *springService) Imports() (result string) {
 			in[i-1] = "message"
 			newOutputType := strings.Join(in, ".")
 
-			output = "import" + " " + "com.ezbuy.blazer.api." + newOutputType
+			output = "import" + " " + "com.ezbuy.blazer.api." + newOutputType + ";"
 		} else {
-			output = "import" + " " + "com.ezbuy.blazer.api." + m.Package + ".message." + m.OutputType
+			output = "import" + " " + "com.ezbuy.blazer.api." + m.Package + ".message." + m.OutputType + ";"
 		}
 
 		if !in_array(input, imports) {
@@ -92,7 +92,7 @@ func (s *springService) Imports() (result string) {
 		}
 	}
 
-	result = strings.Join(imports, ";\n")
+	result = strings.Join(imports, "\n")
 
 	return
 }
