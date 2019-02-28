@@ -93,25 +93,14 @@ func (g *springGen) getTpl(path string) *template.Template {
 func (g *springGen) init(applicationName, packageName string) {
 	g.ApplicationName = applicationName
 	g.PackageName = packageName
-	g.structTpl = g.getTpl("/generator/template/spring_struct.gojava")
-	g.serviceTpl = g.getTpl("/generator/template/spring_service.gojava")
+	g.structTpl = g.getTpl("/generator/template/ezSpring/spring_struct.gojava")
+	g.serviceTpl = g.getTpl("/generator/template/ezSpring/spring_service.gojava")
 }
 
 func (g *springGen) getStructFilename(packageName string, msg *data.MessageData, service *data.ServiceData) string {
 	data.FlattenLocalPackage(msg)
 
 	var name = strings.Replace(packageName, ".", "/", -1) + "/message/" + msg.Name + ".java"
-
-	// for _, method := range service.Methods {
-
-	// 	log.Printf("%s: %s: %s", msg.Name, method.InputType, method.OutputType)
-
-	// 	if strings.Compare(method.InputType, msg.Name) == 0 {
-	// 		name = strings.Replace(packageName, ".", "/", -1) + "/input/" + msg.Name + ".java"
-	// 	} else if strings.Compare(method.OutputType, msg.Name) == 0 {
-	// 		name = strings.Replace(packageName, ".", "/", -1) + "/output/" + msg.Name + ".java"
-	// 	}
-	// }
 
 	return name
 }

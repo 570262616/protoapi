@@ -1,0 +1,113 @@
+package output
+
+import (
+	"strings"
+
+	"github.com/yoozoo/protoapi/generator/data"
+)
+
+type blazerGrpcMethod struct {
+	*data.Method
+	ServiceName string
+}
+
+func (m *blazerGrpcMethod) Path() string {
+	return "/" + m.ServiceName + "." + m.Name
+}
+
+func (s *blazerGrpcService) Path() string {
+	return s.Methods[0].Package + "." + s.Name
+}
+
+func (m *blazerGrpcMethod) ServiceType() string {
+	if servType, ok := m.Options[data.MethodOptions[data.ServiceTypeMethodOption].Name]; ok {
+		return servType
+	}
+
+	return "POST"
+}
+
+type blazerGrpcService struct {
+	*data.ServiceData
+	Package string
+	Methods []*blazerGrpcMethod
+}
+
+func newBlazerGrpcService(msg *data.ServiceData, packageName string) *blazerGrpcService {
+	o := &blazerGrpcService{
+		msg,
+		packageName,
+		nil,
+	}
+	o.init()
+	return o
+}
+
+func (s *blazerGrpcService) init() {
+	s.Methods = make([]*blazerGrpcMethod, len(s.ServiceData.Methods))
+	for i, f := range s.ServiceData.Methods {
+		mtd := f
+		s.Methods[i] = &blazerGrpcMethod{mtd, s.Name}
+	}
+}
+
+func (s *blazerGrpcService) AlsImports() (result string) {
+	var imports []string
+
+	for _, m := range s.Methods {
+
+		var input string
+		var output string
+		// if !IsContainsPoint(m.InputType) {
+		// 	in := strings.Split(m.InputType, ".")
+		// 	i := len(in)
+
+		// 	in = append(in, "")
+		// 	copy(in[i:], in[i-1:])
+		// 	in[i-1] = "message"
+		// 	newInputType := strings.Join(in, ".")
+
+		// 	input = "import" + " " + "com.als.grpc." + newInputType + ";"
+		// } else {
+		// 	input = "import" + " " + "com.als.grpc." + m.Package + "." + m.InputType + ";"
+		// }
+
+		if !IsContainsPoint(m.InputType) {
+
+		}
+
+		input = "import" + " " + "com.ezbuy.blazer.api." + m.Package + "." + s.Name + "Public." + m.InputType + ";"
+
+		// if !IsContainsPoint(m.OutputType) {
+
+		// 	in := strings.Split(m.OutputType, ".")
+		// 	i := len(in)
+
+		// 	in = append(in, "")
+		// 	copy(in[i:], in[i-1:])
+		// 	in[i-1] = "message"
+		// 	newOutputType := strings.Join(in, ".")
+
+		// 	output = "import" + " " + "com.als.grpc." + newOutputType + ";"
+		// } else {
+		// 	output = "import" + " " + "com.als.grpc." + m.Package + "." + m.OutputType + ";"
+		// }
+
+		output = "import" + " " + "com.ezbuy.blazer.api." + m.Package + "." + s.Name + "Public." + m.OutputType + ";"
+
+		if !in_array(input, imports) {
+			imports = append(imports, input)
+		}
+		if !in_array(output, imports) {
+			imports = append(imports, output)
+		}
+	}
+
+	result = strings.Join(imports, "\n")
+
+	return
+}
+
+func (s *blazerGrpcService) AlsPackage() (result string) {
+	return "com.ezbuy.blazer.gateway.grpc.service." + s.Methods[0].Package
+}

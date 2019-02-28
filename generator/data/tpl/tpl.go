@@ -266,6 +266,70 @@ wLXON23rtCqFE78DAAD//3AqAjycAwAA
 `,
 	},
 
+	"/generator/template/ezJavaGrpc/als_service.gojava": {
+		name:    "als_service.gojava",
+		local:   "generator/template/ezJavaGrpc/als_service.gojava",
+		size:    766,
+		modtime: 0,
+		compressed: `
+H4sIAAAAAAAC/3xRwW7bMAy96yuIoIcEyNj7vA1d16LLYU2ABLsrNusKsSWNotxmgv59kJ0i6QbMJ4t8
+j+/x8foavrmGoCVLrIUa2B/BsxOnvangbg2P6x3c3612qJTX9UG3BCnh1y5splfOlVJTZdV7xxJyVild
+Bfj4GTBnpcxYhtr1qLuALfsaUwLcaHmGnB/Y19W/KC30oo/ILoqxLf6OsZuoBX//SnUUx9UbzbipGSTu
+cStMul/vA/FAZ4zjFoNnY9sn1j29OD7gnrQN+KRrcXxEba0TLcZZ/Km7SP+lBiEmJ0dPuCUeTE2VUjen
+3/nsYsPZQvm470wNdadDKPk96p5yPoGBXoVsc9F4mDI6vVa97251IEhKAQDcjObms6s0bYjFY1EpTc9m
+0EJgrECpV2oipfQBWNuWAH+QPLsmQDnOOG89ELNpaBowWR2cac6G5inhyvoou6MnyBmYfkUKsoT3YX9K
+CddRzsAvwBS8s4HeIAtIo075Lm+J30X8lmwzL7aXZ4W/BywhJWDq3UCbQ1v8wXtNvI2ma4hxjHtRjXL5
+HAPZZtw9/wkAAP//Nm88Iv4CAAA=
+`,
+	},
+
+	"/generator/template/ezJavaGrpc/blazer_service.gojava": {
+		name:    "blazer_service.gojava",
+		local:   "generator/template/ezJavaGrpc/blazer_service.gojava",
+		size:    793,
+		modtime: 0,
+		compressed: `
+H4sIAAAAAAAC/3xRwW7bMAy96yuIoIcEyNj7vA1d12LLYU2ABLvLNusKsSWNot26gv59kN0u2YbVJ4t8
+j3zv8fISvriaoCFLrIVqKEfw7MRpbwq42cLd9gC3N5sDKuV1ddQNQYz4uQ27+ZVSodRc2XTesYSUVIwX
+Ad5/BExJKTOVoXId0nPZj1i2+pkYtTcYI+BOywOk9JV9Vfwf3WihRz1iht0+UdWL4+IVbRw27CsM0pe4
+FybdbctAPNAJ47jB4NnY5p51R4+Oj1iStgHvdSWOR9TWOtFinMUfuu3pTWoQYnIyesI98WAqKpS6evld
+Ls6MLVbK92VrKqhaHUKO7053lNILGOhJyNZnjewRf782nW+vdSCISgEAXE3ilouLODvErDFvyU3PZtBC
+YKxArhdqJsX4DljbhgC/kzy4OkC+zTRvOxCzqWkeMEsdnKlPgpYxMnVuoN2xyRXAjfW9HEZPkBIw/ewp
+yBr+jP7DP6xtLyfaJ2AK3tlAr4QVxElD/s7vjN9E/J5svcyW1qd9fw9YQ4zw1k687k1bE+N0ilUxrUun
+iMjWUy7pVwAAAP//45gHfhkDAAA=
+`,
+	},
+
+	"/generator/template/ezSpring/spring_service.gojava": {
+		name:    "spring_service.gojava",
+		local:   "generator/template/ezSpring/spring_service.gojava",
+		size:    673,
+		modtime: 0,
+		compressed: `
+H4sIAAAAAAAC/5yRwW7bMAyG73oKotghPYy5LyiQbt3BwNoYXV6AtllNSCxqlBzDFfTug90069Bdthuh
+nz8/8td6DV+kY7DsWSlxB80EQSUJBbeBux087Pbw9a7aozGB2gNZhpyxfilLwbnPmJyx6oNoiqWYnD9E
++HQDWIoxbnkGUYsxqPP2SannUfSAIzfYON8heS+JkhOPtcR0TyE4bzf/6n3knwPH9Fm66X+9F/Srv5Ue
++bkZJmyO9MyKrSijcgziI+PjubjwnGAcyVrWN9Mj3gZXk1K/MWb7J2p1tc4ZknyTkRXwgfo51ZzP1dW1
+CUNzdC04n1ifqF3yfxG/s55cy7d1BdkYAICcP4KStwx4z+mHdBHmT5il7ZtoVyc6Dgw3sMCXabCw5sYz
+L2flXk5cH+yi425IYUj7KXAp8H7n1fb1yPfWyv/deXmHUq43v09g3y17F/MrAAD//0BbxZ6hAgAA
+`,
+	},
+
+	"/generator/template/ezSpring/spring_struct.gojava": {
+		name:    "spring_struct.gojava",
+		local:   "generator/template/ezSpring/spring_struct.gojava",
+		size:    538,
+		modtime: 0,
+		compressed: `
+H4sIAAAAAAAC/2SRQYsbMQyF7/oVYtlDG6hzb1iYkLSwhWYDzR/QZITrxmMZ2zMla/Tfi6dkD8lFiOcP
+v8fTeo07GRgtB05UeMD+ijFJEYpug/s3PLyd8Nv+9WQAIp0vZBlrNcf/q6oZOWeyvAGo1byOUVLJqlDr
+c8avL2hUAdwioxOT/5K1nAyFIIWKk5DNNrqfMrA/JomcynVz472MvVzMngrda1vvt8nmnYRc0nQuku6J
+gzwAN+IPzWScmF+cHHn3Tr1v+derFeAKO5rKb0nI7/10RQn4XAcqrICrNXQtDHSP9tA9GEKceu/OePaU
+cytt15YDjayKFQARsdYvmChYRvPdsR9adU1fRnffzKeZ/MT4gk/tNxlHDkX16fNCx+RmKu06iUeZ+Xix
+zQvND5rpdI2L6/3bMlU3H2E4DKgKCv8CAAD//8qIeZQaAgAA
+`,
+	},
+
 	"/generator/template/go/enum.gogo": {
 		name:    "enum.gogo",
 		local:   "generator/template/go/enum.gogo",
@@ -396,37 +460,6 @@ mtOtU2zXHlH2oQRF/VLZndbiL4N1418Ui7ENgrIlvoF/b0aBgJ7R7XXEU2qXQVlfbdl88FiNvbCLh3Gv
 e3nO1BLs2LEoVTbc3Nzu/daG1V5i9myIda2SDZdPt25Bzo4VrmCoaELZDit7Zvsj+5fxVwY5OMjJk5sY
 z6Dn78rKXcvjQZ7vOCyJJEXy4tKvrRNFr2xP2W2/Oz4PSBhexFRXz8vYjCHd827lUqle/vvxy7X5v+wB
 tisVzCnvvwAAAP//2W6eJx4PAAA=
-`,
-	},
-
-	"/generator/template/spring_service.gojava": {
-		name:    "spring_service.gojava",
-		local:   "generator/template/spring_service.gojava",
-		size:    695,
-		modtime: 0,
-		compressed: `
-H4sIAAAAAAAC/5yRQW8TMRCF7/4Vo4pDemByJxSlUA6RaLMq+QOzu1NjJesxY2+i1PJ/R7tNlgROcLNm
-5r1P73k+hy/SMlj2rJS4hfoIQSUJBbeAhzU8rTfw9WG1QWMCNVuyDDlj9fYsBYc7Y3LGVRdEUyzF5Pwu
-woc7wFKMceMYRC3GoM7bF6WOD6JbPHCNtfMtkveSKDnxWElMjxSC83bxr9pn/tlzTJ+lPf6vdkKf9Y10
-yK91f8R6R6+s2IgyKscgPjI+nx4TzwnGA1nLeuEe8T64ipS6hTHLa9TsZp4zQJJvcmAFfKKOS7m5NaGv
-d64B5xPrCzVj7W/L76x71/B9tYJsDABAzu9ByVsGfOT0Q9oIQ/fDannR6GxPu57hDkbmFRJG5iA4cc/J
-Puas3Mmeq60dD3Hdp9CnzTFwKZ/gT6NSZsuLj4DlOTr8ZbTyk8+VzTSHUm4XvxOyb8dYxfwKAAD//zn0
-FN63AgAA
-`,
-	},
-
-	"/generator/template/spring_struct.gojava": {
-		name:    "spring_struct.gojava",
-		local:   "generator/template/spring_struct.gojava",
-		size:    449,
-		modtime: 0,
-		compressed: `
-H4sIAAAAAAAC/1xPzaoTMRjd5ykOl7vQQTN7hwuVW4Ur2BbsC3zT+RxjM0lIMiPTkKUoLgR3rly7UsG9
-b9OKbyEzYhfdHA4n+c5PWeLWNoyWDXuK3KAe4byNlpyqsFxjtd7iyfJuK4VwtNtTy0hJbv7RnGXHIVDL
-lRApybvOWR9DziKl64BHN5A5C6FmGcrK8Ibalr0kY2ykqKwJ8rFTz23DeuOtYx/H6v9/bbva7uWSIlVn
-k9c0kFRWvmCvSKsD1XoKL4tCoMCC+vjKevCh7kdYg+vUUOQsUJRiMTkJ19da7bDTFMI05XYiK+o4ZyQh
-ACClh/BkWoZ8qlg306BJn2Fx2ffeQLpn3ODq9P7T6fP308+vf959eIDjr7fHb19+f/xxdX8+dF4NFBkv
-lSGNlDx3duDNvp3CIZ/RQNvRzTUu32bMuTq3Y9MgZ5HF3wAAAP//4Zq7DcEBAAA=
 `,
 	},
 
@@ -672,6 +705,18 @@ ZvO2hqsHAAA=
 		isDir: true,
 	},
 
+	"/generator/template/ezJavaGrpc": {
+		name:  "ezJavaGrpc",
+		local: `generator/template/ezJavaGrpc`,
+		isDir: true,
+	},
+
+	"/generator/template/ezSpring": {
+		name:  "ezSpring",
+		local: `generator/template/ezSpring`,
+		isDir: true,
+	},
+
 	"/generator/template/go": {
 		name:  "go",
 		local: `generator/template/go`,
@@ -715,14 +760,24 @@ var _escDirs = map[string][]os.FileInfo{
 		_escData["/generator/template/echo_enum.gogo"],
 		_escData["/generator/template/echo_service.gogo"],
 		_escData["/generator/template/echo_struct.gogo"],
+		_escData["/generator/template/ezJavaGrpc"],
+		_escData["/generator/template/ezSpring"],
 		_escData["/generator/template/go"],
 		_escData["/generator/template/go_client.gogo"],
 		_escData["/generator/template/markdown.gomd"],
 		_escData["/generator/template/php_client.gophp"],
-		_escData["/generator/template/spring_service.gojava"],
-		_escData["/generator/template/spring_struct.gojava"],
 		_escData["/generator/template/ts"],
 		_escData["/generator/template/yii2"],
+	},
+
+	"generator/template/ezJavaGrpc": {
+		_escData["/generator/template/ezJavaGrpc/als_service.gojava"],
+		_escData["/generator/template/ezJavaGrpc/blazer_service.gojava"],
+	},
+
+	"generator/template/ezSpring": {
+		_escData["/generator/template/ezSpring/spring_service.gojava"],
+		_escData["/generator/template/ezSpring/spring_struct.gojava"],
 	},
 
 	"generator/template/go": {

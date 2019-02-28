@@ -7,6 +7,8 @@ package {{.Package}}.message;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -14,11 +16,13 @@ import java.io.Serializable;
  * @author ezbuy on ${date}
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class {{.ClassName}} {
 
     {{- range .Fields}}
     
-    @ApiModelProperty(value = "我是注释, 待实现")
-    private final {{removePkgName .JavaType}} {{removePkgName .Name }};
+    @ApiModelProperty(value = "{{.Comment}}")
+    private {{removePkgName .JavaType}} {{removePkgName .Name }};
     {{- end }}
 }

@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.ezbuy.blazer.core.response.Response;
 import io.swagger.annotations.ApiParam;
 
-@RequestMapping("/{{  toLower .Name}}")
+@RequestMapping("/{{ toLower .Name}}.{{.Name}}")
 public interface {{.Name}}ServiceAPI {
 
     {{- range .Methods }}
 
-    @PostMapping(value = "/{{ toLower .Name }}")
-    public Response<{{removePkgName .OutputType}}> {{ toLower .Name}}(@RequestBody @ApiParam {{removePkgName .InputType}} {{ toLower .InputType }});
+    @PostMapping(value = "/{{ .Name }}")
+    public {{removePkgName .OutputType}} {{ toLower .Name}}(@ApiParam {{removePkgName .InputType}} {{ toLower .InputType }});
 
     {{- end }}
 
