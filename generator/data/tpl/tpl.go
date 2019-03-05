@@ -286,17 +286,31 @@ HAPZZtw9/wkAAP//Nm88Iv4CAAA=
 	"/generator/template/ezJavaGrpc/blazer_service.gojava": {
 		name:    "blazer_service.gojava",
 		local:   "generator/template/ezJavaGrpc/blazer_service.gojava",
-		size:    793,
+		size:    803,
 		modtime: 0,
 		compressed: `
-H4sIAAAAAAAC/3xRwW7bMAy96yuIoIcEyNj7vA1d12LLYU2ABLvLNusKsSWNot26gv59kN0u2YbVJ4t8
-j3zv8fISvriaoCFLrIVqKEfw7MRpbwq42cLd9gC3N5sDKuV1ddQNQYz4uQ27+ZVSodRc2XTesYSUVIwX
-Ad5/BExJKTOVoXId0nPZj1i2+pkYtTcYI+BOywOk9JV9Vfwf3WihRz1iht0+UdWL4+IVbRw27CsM0pe4
-FybdbctAPNAJ47jB4NnY5p51R4+Oj1iStgHvdSWOR9TWOtFinMUfuu3pTWoQYnIyesI98WAqKpS6evld
-Ls6MLVbK92VrKqhaHUKO7053lNILGOhJyNZnjewRf782nW+vdSCISgEAXE3ilouLODvErDFvyU3PZtBC
-YKxArhdqJsX4DljbhgC/kzy4OkC+zTRvOxCzqWkeMEsdnKlPgpYxMnVuoN2xyRXAjfW9HEZPkBIw/ewp
-yBr+jP7DP6xtLyfaJ2AK3tlAr4QVxElD/s7vjN9E/J5svcyW1qd9fw9YQ4zw1k687k1bE+N0ilUxrUun
-iMjWUy7pVwAAAP//45gHfhkDAAA=
+H4sIAAAAAAAC/3xRQW/bPAy961cQQQ8JkI+9f96GrmuxBdiaAAl2l23WFWJLGkW7TQT990F2umQbVp8s
+8j3yPb7ra/jkaoKGLLEWqqE8gGcnTntTwN0aHtY7uL9b7VApr6u9bghixI9t2EyvlAqlpsqq844lpKRi
+vArw/3vAlJQyYxkq1yEdy/6AZauPxKi9wRgBN1qeIKXP7Kvi3+hj37fYsK8wA+9fqOrFcfGKN25qBulL
+3AqT7tZlIB7ojHHcYPBsbPPIuqNnx3ssSduAj7oSxwfU1jrRYpzF77rt6U1qEGJycvCEW+LBVFQodXP6
+nc8urM0WyvdlayqoWh1CPuCD7iilExjoRcjWF43sEX+9Vp1vb3UgiEoBANyM4uazqzg5xKwxb8lNz2bQ
+QmCsQK4XaiLF+B+wtg0BfiN5cnWAnM44bz0Qs6lpGjBJHZypIUZxX90zMZykzGNk6txAm32TK4Ar63vZ
+HTxBSsD0o6cgS/g9gnd/sda9nGkfgCl4ZwO9EhYQRy35u8wbv4j4Ldl6nq0tz/v+HLCEGOGtnXjbm7Ym
+xjGSRTGuS+dTka3H+6SfAQAA//+fAE9eIwMAAA==
+`,
+	},
+
+	"/generator/template/ezSpring/spring_enum.gojava": {
+		name:    "spring_enum.gojava",
+		local:   "generator/template/ezSpring/spring_enum.gojava",
+		size:    478,
+		modtime: 0,
+		compressed: `
+H4sIAAAAAAAC/3SQTWrDMBCF155TvGUKxTmAyKpOoZuk0FxAsQZVNJaNJAeKmLsX+aekabsz40/fezPb
+LZ56w7DsOejEBudPDKFPvR6cQnPE4XjCvnk51USDbj+0ZeRcv86fInXHMWrLimgYzxfXgv3YIWfUB90x
+RJCJAJRXez92z44vJoqoeToEd9VpchZeZON8QtsbfsRbCs5bGI7tAzJVVXp3sS7/sJsQtc4Kgt1EKqpk
+Ms/6uVNxWk5l1c2sCpzG4FeLEFULeu2dQVzYtcu/8UK3MUthy6nh2P5M+u72K2li/971fi+q1nutze7O
+eKNRJF8BAAD//9tad3feAQAA
 `,
 	},
 
@@ -318,15 +332,16 @@ L2flXk5cH+yi425IYUj7KXAp8H7n1fb1yPfWyv/deXmHUq43v09g3y17F/MrAAD//0BbxZ6hAgAA
 	"/generator/template/ezSpring/spring_struct.gojava": {
 		name:    "spring_struct.gojava",
 		local:   "generator/template/ezSpring/spring_struct.gojava",
-		size:    538,
+		size:    634,
 		modtime: 0,
 		compressed: `
-H4sIAAAAAAAC/2SRQYsbMQyF7/oVYtlDG6hzb1iYkLSwhWYDzR/QZITrxmMZ2zMla/Tfi6dkD8lFiOcP
-v8fTeo07GRgtB05UeMD+ijFJEYpug/s3PLyd8Nv+9WQAIp0vZBlrNcf/q6oZOWeyvAGo1byOUVLJqlDr
-c8avL2hUAdwioxOT/5K1nAyFIIWKk5DNNrqfMrA/JomcynVz472MvVzMngrda1vvt8nmnYRc0nQuku6J
-gzwAN+IPzWScmF+cHHn3Tr1v+derFeAKO5rKb0nI7/10RQn4XAcqrICrNXQtDHSP9tA9GEKceu/OePaU
-cytt15YDjayKFQARsdYvmChYRvPdsR9adU1fRnffzKeZ/MT4gk/tNxlHDkX16fNCx+RmKu06iUeZ+Xix
-zQvND5rpdI2L6/3bMlU3H2E4DKgKCv8CAAD//8qIeZQaAgAA
+H4sIAAAAAAAC/2SR0WvbMBDG3++vOEof2sCU94WCS7JBSucElj2Ps33z1Mg6IcneUqH/fcgjJSQv5+Pz
+T/pO9y2XuJaOsWfLniJ32JzQeYlCTq9ws8N6d8Avm+1BAThqj9QzpqT2/9uc1cAhUM8rgJTUdnDiY8gZ
+UroP+PkJVc4AepaxlUH9ohDZ/x2MeqP2GMQqslYiRS1WvQSxW9uasePV+ZAWFf5Q37O/IIN6dvqbdGz2
+Xhz7ePrgjQyNHNWGIl1rz8Y8+z6sxYboxzaKvyZquQHOxBtNpLSo7+w1Gf1OjSmPXi4WgAusaIy/xSO/
+N+MJxeJ96ihyBlwsoSrDQHVrD9WNIVQXS3i46NX5W+/qn/WP19dHcGNjdIutoRBKKOvS1DRwzpgAEBFT
++oSebM+ovmo2XYmm6HOprpf4MJEZGZ/wrtwmw8A25nz3ONPO64liSd/zIBPvj33xQvVCEx1Obna9/jfX
+nFcfw7DtMGfI8C8AAP//+a3z7HoCAAA=
 `,
 	},
 
@@ -776,6 +791,7 @@ var _escDirs = map[string][]os.FileInfo{
 	},
 
 	"generator/template/ezSpring": {
+		_escData["/generator/template/ezSpring/spring_enum.gojava"],
 		_escData["/generator/template/ezSpring/spring_service.gojava"],
 		_escData["/generator/template/ezSpring/spring_struct.gojava"],
 	},

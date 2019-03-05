@@ -7,7 +7,7 @@ package {{.AlsPackage}};
 
 import com.ezbuy.blazer.api.{{ .Path }}Grpc;
 
-import com.ezbuy.blazer.gateway.GrpcExecutor;
+import com.ezbuy.blazer.zuul.grpc.GrpcExecutor;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class {{.Name}}Service extends {{.Name}}Grpc.{{.Name}}ImplBase {
     {{- range .Methods }}
 
     @Override
-    public void {{.Name}}({{removePkgName .InputType }} request, StreamObserver<{{removePkgName .OutputType }}> responseObserver) {
+    public void {{toLower .Name}}({{removePkgName .InputType }} request, StreamObserver<{{removePkgName .OutputType }}> responseObserver) {
         GrpcExecutor.HttpSend(port, request, responseObserver, {{ removePkgName .OutputType }}.Builder.class);
     }
 

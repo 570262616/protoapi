@@ -8,6 +8,7 @@ import (
 
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/yoozoo/protoapi/generator/data"
+	"github.com/yoozoo/protoapi/util"
 )
 
 var javaTypes = map[string]string{
@@ -71,6 +72,7 @@ type springGen struct {
 	PackageName     string
 	structTpl       *template.Template
 	serviceTpl      *template.Template
+	enumTpl         *template.Template
 }
 
 func (g *springGen) getTpl(path string) *template.Template {
@@ -95,6 +97,7 @@ func (g *springGen) init(applicationName, packageName string) {
 	g.PackageName = packageName
 	g.structTpl = g.getTpl("/generator/template/ezSpring/spring_struct.gojava")
 	g.serviceTpl = g.getTpl("/generator/template/ezSpring/spring_service.gojava")
+	g.enumTpl = g.getTpl("/generator/template/ezSpring/spring_enum.gojava")
 }
 
 func (g *springGen) getStructFilename(packageName string, msg *data.MessageData, service *data.ServiceData) string {
@@ -103,6 +106,18 @@ func (g *springGen) getStructFilename(packageName string, msg *data.MessageData,
 	var name = strings.Replace(packageName, ".", "/", -1) + "/message/" + msg.Name + ".java"
 
 	return name
+}
+
+func (g *springGen) genEnum(enum *data.EnumData) string {
+	buf := bytes.NewBufferString("")
+
+	obj := newSpringEnum(enum, g.PackageName)
+	err := g.enumTpl.Execute(buf, obj)
+	if err != nil {
+		util.Die(err)
+	}
+
+	return buf.String()
 }
 
 func (g *springGen) genStruct(msg *data.MessageData) string {
@@ -139,6 +154,13 @@ func (g *springGen) genServiceFileName(packageName string, service *data.Service
 	return strings.Replace(packageName, ".", "/", -1) + "/api/" + service.Name + "ServiceAPI.java"
 }
 
+func (g *springGen) getEnumFilename(packageName string, enum *data.EnumData) string {
+	// return packageName + "/" + enum.Name + ".java"
+	var name = strings.Replace(packageName, ".", "/", -1) + "/message/" + enum.Name + ".java"
+
+	return name
+}
+
 func (g *springGen) Init(request *plugin.CodeGeneratorRequest) {
 }
 
@@ -165,6 +187,13 @@ func (g *springGen) Gen(applicationName string, packageName string, services []*
 		if !strings.Contains(newFlieName, ".") {
 			result[filename] = content
 		}
+	}
+
+	for _, enum := range enums {
+		filename := g.getEnumFilename(g.PackageName, enum)
+		content := g.genEnum(enum)
+
+		result[filename] = content
 	}
 
 	// make file name same as java class name
