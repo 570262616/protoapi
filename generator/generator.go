@@ -34,6 +34,7 @@ func createEnums(pkg string, path string, enums []*descriptor.EnumDescriptorProt
 		var enumData = new(data.EnumData)
 		enumData.Name = pkg + "." + enum.GetName()
 		enumData.Comment = getCommentsFromMap(enumCommPath, cMap)
+		enumData.Package = pkg
 
 		for fIndex, field := range enum.GetValue() {
 			var enumFieldCommPath = enumCommPath + strconv.Itoa(data.EnumFieldCommentPath) + strconv.Itoa(fIndex)

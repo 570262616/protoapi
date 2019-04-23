@@ -193,7 +193,9 @@ func (g *springGen) Gen(applicationName string, packageName string, services []*
 		filename := g.getEnumFilename(g.PackageName, enum)
 		content := g.genEnum(enum)
 
-		result[filename] = content
+		if strings.Contains(g.PackageName, enum.Package) {
+			result[filename] = content
+		}
 	}
 
 	// make file name same as java class name

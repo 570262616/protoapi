@@ -110,6 +110,7 @@ type EnumData struct {
 	Name    string // enum type name
 	Comment string
 	Fields  []EnumField // enum entries
+	Package string
 }
 
 // MessageField a field for the defined message.
